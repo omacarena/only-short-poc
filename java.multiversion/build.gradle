@@ -1,0 +1,35 @@
+group 'multiversion'
+version '0.1-SNAPSHOT'
+
+subprojects {
+
+    apply plugin: 'java-library'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src/main']
+            }
+            resources {
+                srcDirs = ['src/main/resources']
+            }
+        }
+        test {
+            java {
+                srcDirs = ['src/test']
+            }
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}
