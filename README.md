@@ -1,1 +1,1 @@
-# support-others
+# Only short Proof of Concepts [POC]
