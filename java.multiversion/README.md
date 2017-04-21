@@ -26,3 +26,5 @@ Meaning that the two library versions and their associated dependencies are load
 
 
 **NOTE:** created using IntelliJ IDEA 2017.1
+
+**NOTE:** `Core` interface could be part of another project which is used by projects `v1` and `v2`, which could allow us to cast the newly created instance and work in a typesafe manner. But this might not be doable every time.
