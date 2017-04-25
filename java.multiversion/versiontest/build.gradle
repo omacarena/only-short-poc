@@ -2,3 +2,7 @@
 apply plugin: 'application'
 
 mainClassName = 'sample.multiversion.versiontext.TestMain'
+
+dependencies {
+    compile project(":v3")
+}

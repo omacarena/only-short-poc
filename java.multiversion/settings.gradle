@@ -4,4 +4,6 @@ include 'v2'
 include 'versiontest'
 include 'v1dep'
 include 'v2dep'
+include 'v3'
+include 'v3dep'
 

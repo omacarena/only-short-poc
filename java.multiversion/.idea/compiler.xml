@@ -10,6 +10,10 @@
       <module name="v2_test" target="1.8" />
       <module name="v2dep_main" target="1.8" />
       <module name="v2dep_test" target="1.8" />
+      <module name="v3_main" target="1.8" />
+      <module name="v3_test" target="1.8" />
+      <module name="v3dep_main" target="1.8" />
+      <module name="v3dep_test" target="1.8" />
       <module name="versiontest_main" target="1.8" />
       <module name="versiontest_test" target="1.8" />
     </bytecodeTargetLevel>
