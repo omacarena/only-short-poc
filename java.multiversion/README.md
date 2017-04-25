@@ -32,6 +32,8 @@ In order to fix this
 
 - V1 loader :: version = 'core-v1' :: dependency_version = 'core-dep-v1'
 - V2 loader :: version = 'core-v2' :: dependency_version = 'core-dep-v2'
+- V3 loader :: version = 'core-v3' :: dependency_version = 'core-dep-v3'
+
 
 Meaning that the two library versions and their associated dependencies are loaded correctly.
 
