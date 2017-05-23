@@ -1,0 +1,28 @@
+<form [formGroup]="personForm">
+  <div>
+    <label for="firstName">First name:</label>
+
+    <input type="text"
+           id="firstName"
+           name="firstName"
+           formControlName="firstName"
+           placeholder="First Name" />
+
+    <span *ngIf="personForm.controls['firstName'].errors?.sameValue">Same as last name</span>
+  </div>
+  <div>
+    <label for="lastName">Last name:</label>
+
+    <input type="text"
+           id="lastName"
+           name="lastName"
+           formControlName="lastName"
+           placeholder="Last Name" />
+
+    <span *ngIf="personForm.controls['lastName'].errors?.sameValue">Same as first name</span>
+  </div>
+
+  <p style="color: red" *ngIf="personForm.errors?.sameValue">First name and last name should not be the same.</p>
+
+  <button type="submit">Submit</button>
+</form>
