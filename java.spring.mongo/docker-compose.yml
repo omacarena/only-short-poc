@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  myapp:
+    build: ./myapp/docker
+    environment:
+      - SERVER_PORT=8080
+      - MONGODB_URI=mongodb://mymongo:27017/mydb
+      - MONGODB_STATUS_HOST=mymongo
+      - MONGODB_STATUS_PORT=28017
+    ports:
+      - 8888:8080
+  mymongo:
+    image: mongo:3.4
+    volumes:
+      - ./_data:/data/db
+    ports:
+      - 12345:27017
+      - 23456:28017
+    command: ["mongod", "--rest"]

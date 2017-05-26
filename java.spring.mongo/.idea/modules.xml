@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java.spring.mongo.iml" filepath="$PROJECT_DIR$/.idea/modules/java.spring.mongo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myapp.iml" filepath="$PROJECT_DIR$/.idea/modules/myapp.iml" group="myapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myapp/myapp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/myapp/myapp_main.iml" group="myapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myapp/myapp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/myapp/myapp_test.iml" group="myapp" />
+    </modules>
+  </component>
+</project>

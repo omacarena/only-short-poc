@@ -1,0 +1,74 @@
+buildscript {
+
+    ext {
+        // spring
+        springBootVersion = '1.5.3.RELEASE'
+
+        // testing
+        junitVersion = '4.12'
+        assertjVersion = '3.7.0'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+version '0.1-SNAPSHOT'
+
+allprojects {
+    // enable incremental Java compilation
+    tasks.withType(JavaCompile) {
+        options.incremental = true
+    }
+}
+
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.springframework.boot:spring-boot-starter"
+        compile 'org.springframework.boot:spring-boot-starter-web'
+        compile "org.springframework.boot:spring-boot-devtools"
+        testCompile "org.springframework.boot:spring-boot-starter-test"
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src/main']
+            }
+            resources {
+                srcDirs = ['src/main/resources']
+            }
+        }
+        test {
+            java {
+                srcDirs = ['src/test']
+            }
+        }
+    }
+
+    task copyJar(type: Copy) {
+        from jar
+        into "./docker"
+    }
+
+    build.dependsOn copyJar
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}
