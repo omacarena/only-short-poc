@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  mysql1:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpass1
+      - MYSQL_DATABASE=test1
+      - MYSQL_USER=myuser1
+      - MYSQL_PASSWORD=mypass1
+    volumes:
+      - ./_data/mysqldata1:/var/lib/mysql
+    ports:
+      - 3307:3306
+  mysql2:
+      image: mysql:5.7
+      environment:
+        - MYSQL_ROOT_PASSWORD=rootpass2
+        - MYSQL_DATABASE=test2
+        - MYSQL_USER=myuser2
+        - MYSQL_PASSWORD=mypass2
+      volumes:
+        - ./_data/mysqldata2:/var/lib/mysql
+      ports:
+        - 3308:3306
+  myapp:
+    build: ./myapp/docker
+    environment:
+      - SERVER_PORT=8080
+    ports:
+      - 8888:8080

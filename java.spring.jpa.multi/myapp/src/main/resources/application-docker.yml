@@ -1,0 +1,24 @@
+source1:
+  mysql:
+    jpa:
+      show-sql: true
+      generate-ddl: true
+      database: MYSQL
+    datasource:
+      platform: postgres
+      url: jdbc:mysql://mysql1:3306/test1
+      username: myuser1
+      password: mypass1
+      driverClassName: com.mysql.cj.jdbc.Driver
+source2:
+  mysql:
+    jpa:
+      show-sql: true
+      generate-ddl: true
+      database: MYSQL
+    datasource:
+      platform: postgres
+      url: jdbc:mysql://mysql2:3306/test2
+      username: myuser2
+      password: mypass2
+      driverClassName: com.mysql.cj.jdbc.Driver
